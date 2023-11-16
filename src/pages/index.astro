@@ -1,0 +1,46 @@
+---
+import Navbar from '../components/common/Navbar';
+import '../styles/global.css'
+import Hero from '../components/sections/Hero';
+import Items from '../components/sections/Items';
+import Information from '../components/sections/Information';
+import Gallery from '../components/sections/Gallery';
+import Pricing from '../components/sections/Pricing';
+import Testimonials from '../components/sections/Testimonials';
+import Contact from '../components/sections/Contact';
+import Footer from '../components/sections/Footer';
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Smallbang</title>
+        <meta name="description" content="This is a test to check if the deployment is successful, page should have all Lighthouse scores on 90+" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	</head>
+	<body>
+        <a class='anchor' id='top' href='#'></a>
+		<Navbar client:visible />
+        <main class='main'>
+            <Hero />
+            <Items />
+            <Information />
+            <Gallery />
+            <Pricing />
+            <Testimonials />
+            <Contact />
+            <Footer />
+            
+        </main>
+        <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script is:inline>
+            AOS.init({
+                duration: 750,
+            });
+        </script>
+	</body>
+</html>
